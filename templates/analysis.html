@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Insight from Data{% endblock %}</title>
+</head>
+{% block content %}
+
+<body>
+    <br>
+    <br>
+    <br> 
+    <center>
+        <h1>DATA VISUALIZATION</h1>
+    <br>
+    <br>
+    <center>
+    <h3>Data Distribution</h3>
+    <div class="bd-example" align="middle">
+        <img src="{{url_for('static', filename='distribution.png')}}" align="middle" />
+    </div>
+    <br>
+    <h3>Target Value</h3>
+    <div class="bd-example" align="middle">
+        <img src="{{url_for('static', filename='target.png')}}" align="middle" />
+    </div>
+</body>
+
+{% endblock %}

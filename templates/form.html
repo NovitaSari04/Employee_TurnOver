@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+{% block title %}Employee Turn-Over{% endblock %}
+{% block content %}
+
+<body style="background-color:powderblue;">
+
+    <div class="bg">
+
+    <p class="py-5 text-center">
+<center>
+    <div class="column">
+        <h1>Input Employee Data</h1>
+        <br>
+        <form action="http://localhost:5000/model-result" method="POST">
+            <br>
+                <div class="form-row" style="width: 750px">
+                    <!--1-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                        <label for="gender">Gender :</label>
+                            <select name="gender" class="form-control">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                    </div>
+                    <!--2-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                        <label for="MaritalStatus">Marital Status :</label>
+                            <select name="marital" class="form-control">
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                            </select>
+                    </div>
+                    <!--3-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                        <label for="OverTime">Over Time :</label>
+                                <select name="ot" class="form-control">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                    </div>
+                    <!--4-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                        <label for="travel">Business Travel :</label>
+                            <select name="travel" class="form-control">
+                                <option value="Travel_Rarely">Travel Rarely</option>
+                                <option value="Travel_Frequently">Travel Frequently</option>
+                                <option value="Non-Travel">Non Travel</option>
+                            </select>
+                    </div>
+                    <!--5-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                        <label for="JobRole">Job Role :</label>
+                            <select name="role" class="form-control">
+                                <option value="Sales Executive">Sales Executive</option>
+                                <option value="Research Scientist">Research Scientist</option>
+                                <option value="Laboratory Technician">Laboratory Technician</option>
+                                <option value="Manufacturing Director">Manufacturing Director</option>
+                                <option value="Healthcare Representative">Healthcare Representative</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Sales Representative">Sales Representative</option>
+                                <option value="Research Director">Research Director</option>
+                                <option value="Human Resources">Human Resources</option>
+                            </select>
+                    </div>
+                    <!--6-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                    <label for="Department">Department :</label>
+                        <select name="dept" class="form-control">
+                            <option value="Sales">Sales</option>
+                            <option value="Research & Development">Research & Development</option>
+                            <option value="Human Resources">Human Resources</option>
+                        </select>
+                    </div>
+                    <!--7-->
+                    <div class="form-group col-md-3" style="width: 120px" required="required">
+                    <label for="EducationField">Education Field :</label>
+                        <select name="education" class="form-control">
+                            <option value="Life Sciences">Life Sciences</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Technical Degree">Technical Degree</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <!--8-->
+                    <div class="form-group col-md-3" style="width: 100px" required="required">
+                        <label for="Education">Education :</label>
+                            <select name="edu" class="form-control">
+                                <option value="1">Below College</option>
+                                <option value="2">College</option>
+                                <option value="3">Master</option>
+                                <option value="4">Doctor</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="break"></div>
+
+                <div class="form-row" style="width: 750px">
+                    <!--9-->
+                    <div class="form-group col-md-4" style="width: 120px" required="required">
+                    <label for="jobinv">Job Involvement :</label>
+                        <select name="jobinv" class="form-control">
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                            <option value="4">Very High</option>
+                        </select>
+                    </div>
+                    <!--10-->
+                    <div class="form-group col-md-4" style="width: 120px" required="required">
+                    <label for="Performance">Performance Rating :</label>
+                        <select name="perf" class="form-control">
+                            <option value="1">Low</option>
+                            <option value="2">Good</option>
+                            <option value="3">Excellent</option>
+                            <option value="4">Outstanding</option>
+                        </select>
+                    </div>
+                    <!--11-->
+                    <div class="form-group col-md-4" style="width: 100px" required="required">
+                        <label for="Balance">WorkLife Balance :</label>
+                            <select name="balance" class="form-control">
+                                <option value="1">Bad</option>
+                                <option value="2">Good</option>
+                                <option value="3">Better</option>
+                                <option value="4">Best</option>
+                            </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row" style="width: 750px">
+                    <!--12-->
+                    <div class="form-group col-md-4" style="width: 120px" required="required">
+                        <label for="Environment">Environment Satisfaction :</label>
+                            <select name="enviro" class="form-control">
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+                    <!--13-->
+                    <div class="form-group col-md-4" style="width: 120px" required="required">
+                    <label for="Relationship">Relationship Satisfaction :</label>
+                        <select name="relatio" class="form-control">
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                            <option value="4">Very High</option>
+                        </select>
+                    </div>
+                    <!--14-->
+                    <div class="form-group col-md-4" style="width: 120px" required="required">
+                        <label for="JobSatisfaction">Job Satisfaction :</label>
+                            <select name="jobstf" class="form-control">
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                    </div>
+                </div>
+
+
+                <div class="break"></div>
+
+
+                <div class="form-row" style="width: 800px">
+                    <!--15-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="age">Age :</label>
+                        <input type="number" placeholder="Age" name="age" step= "1" min="18" max="100" style="width: 200px" id="age" class="form-control" required=True/>
+                    </div>
+                    <!--16-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="Distance">Distance From Home :</label>
+                        <input type="number" step= "1" min="1" max="30" class="form-control" style="width: 200px" name="distance" placeholder="Miles">
+                    </div>
+                    <!--17-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="DailyRate">Daily Rate :</label>
+                        <input type="number" step= "1" min="0" max="2000" class="form-control" style="width: 200px" name="drate" placeholder="USD">
+                    </div>
+                </div>
+
+
+                <div class="form-row" style="width: 800px">
+                    <!--18-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="HourlyRate">Hourly Rate :</label>
+                        <input type="number" placeholder="USD" name="hrate" step= "1" min="0" max="100" style="width: 200px" id="HourlyRate" class="form-control" required=True/>
+                    </div>
+                    <!--19-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="MonthlyIncome">Monthly Income :</label>
+                            <input type="number" placeholder="USD" name="mincome" step= "1" min="0" max="30000" style="width: 200px" id="MonthlyIncome" class="form-control" required=True/>
+                    </div>
+                    <!--20-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="MonthlyRate">Monthly Rate :</label>
+                            <input type="number" placeholder="USD" name="mrate" step= "1" min="0" max="30000" style="width: 200px" id="MonthlyRate" class="form-control" required=True/>
+                    </div>
+                </div>
+
+                <div class="break"></div>
+
+                <div class="form-row" style="width: 800px">
+                    <!--21-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="companywork">Num Companies Worked :</label>
+                        <input type="number" step= "1" min="0" max="10" class="form-control" style="width: 200px" name="numcomp" placeholder="Number of Companies Worked">
+                    </div>
+                    <!--22-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="salaryhike">Percent Salary Hike :</label>
+                        <input type="number" placeholder="(%)" name="salhike" step= "1" min="0" max="100" style="width: 200px" id="salaryhike" class="form-control" required=True/>
+                    </div>
+                    <!--23-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="Stock">Stock Option Level :</label>
+                        <input type="number" placeholder="Level" name="stock" step= "1" min="0" max="3" style="width: 200px" id="Stock" class="form-control" required=True/>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row" style="width: 800px">
+                    <!--24-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="ttlwork">Total Working Years :</label>
+                        <input type="number" step= "1" min="0" max="40" class="form-control" style="width: 200px" name="workyear" placeholder="Total Years">
+                    </div>
+                    <!--25-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="traintime">Training Times Last Year :</label>
+                        <input type="number" placeholder="Number of Training Attended" name="training" step= "1" min="0" max="20" style="width: 200px" id="traintime" class="form-control" required=True/>
+                    </div>
+                    <!--26-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="YearsAtCompany">Years At Company :</label>
+                        <input type="number" placeholder="Working Year" name="compyear" step= "1" min="0" max="40" style="width: 200px" id="YearsAtCompany" class="form-control" required=True/>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row" style="width: 800px">
+                    <!--27-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="lastpromo">Years Since Last Promotion :</label>
+                        <input type="number" step= "1" min="0" max="15" class="form-control" style="width: 200px" name="promotion" placeholder="Last Promotion">
+                    </div>
+                    <!--28-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="currmanager">Years With Curr Manager :</label>
+                        <input type="number" placeholder="Years with Curr. Manager" name="mngyear" step= "1" min="0" max="20" style="width: 200px" id="currmanager" class="form-control" required=True/>
+                    </div>
+                    <!--29-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="JobLvl">Job Level :</label>
+                        <input type="number" placeholder="Job Level" name="joblvl" step= "1" min="1" max="4" style="width: 200px" id="JobLvl" class="form-control" required=True/>
+                    </div>
+                    <!--30-->
+                    <div class="form-group col-md-4" required="required">
+                        <label for="currrole">Years In Curr Role :</label>
+                        <input type="number" placeholder="Years In Curr Role" name="roleyear" step= "1" min="0" max="20" style="width: 200px" id="currrole" class="form-control" required=True/>
+                    </div>
+                </div>
+            <br>
+            <br>
+            <button type="submit" style="background-color:rgba(17, 73, 156, 0.884); color: whitesmoke; width: 700px"
+            class="btn btn-primary">PREDICT NOW!</button>
+        </form>
+    </div>
+        <div class="break"></div>
+    </div>
+</center>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<br>
+<br>
+<br>
+{% endblock %}

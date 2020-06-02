@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Result!{% endblock %}
+{% block content %}
+<body style="background-color:#68c8ffd2;">
+	<div id="notfound">
+		<center>
+		<div class="notfound">
+			<br>
+			<br>
+			<h2>Turn-Over Probability </h2> <p style="font-size:50px;"><b> {{probability}}% </b> </p>
+			<p style="font-size:50px;"> {{recommendation}} </p>
+		</div>
+		<div class="bd-example" align="middle">
+			<img src="{{url_for('static', filename='cover1.png')}}" align="middle" />
+		</div>
+		</center>
+	</div>
+</body>
+{% endblock %}
